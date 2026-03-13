@@ -1,0 +1,68 @@
+.contact-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center; 
+  min-height: 80vh;    
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-header h1 {
+  font-size: 3.5rem;
+  color: #E50914; 
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.contact-header p {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  max-width: 800px; 
+  width: 100%;
+}
+
+.dept-card {
+  background: #141414;
+  border: 1px solid #333;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dept-card:hover {
+  transform: translateY(-5px);
+  border-color: #E50914;
+  background: #181818;
+}
+
+.dept-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.dept-card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.dept-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}

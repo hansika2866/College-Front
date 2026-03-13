@@ -1,0 +1,96 @@
+.view-container {
+  width: 100%;
+}
+
+.view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.toggle-btn {
+  background-color: #E50914;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #b20710;
+  transform: scale(1.05);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.nf-card {
+  background-color: #181818;
+  padding: 30px;
+  border-radius: 4px;
+  border-left: 4px solid #E50914;
+  transition: background-color 0.3s ease;
+}
+
+.nf-card:hover {
+  background-color: #222222;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-top h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.roll-badge {
+  background: #333;
+  color: #b3b3b3;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.nf-divider {
+  height: 1px;
+  background-color: #333;
+  margin: 20px 0;
+}
+
+.card-body p {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 0.95rem;
+  color: #a3a3a3;
+}
+
+.card-body b {
+  color: #ffffff;
+}
+
+.red-accent {
+  color: #E50914 !important;
+  font-weight: 800;
+}
