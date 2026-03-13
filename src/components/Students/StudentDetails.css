@@ -16,20 +16,36 @@
   color: #ffffff;
 }
 
-.toggle-btn {
-  background-color: #E50914;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.toggle-btn:hover {
-  background-color: #b20710;
-  transform: scale(1.05);
+.toggle-btn, .add-btn {
+  height: 42px;
+  padding: 0 22px;
+  border-radius: 4px;
+  font-size: 0.9rem; 
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  
+  background-color: #E50914 !important; 
+  color: #ffffff !important;
+  border: none !important;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.toggle-btn:hover, .add-btn:hover {
+  background-color: #ff0f1a !important;
+  transform: translateY(-2px);
 }
 
 .card-grid {

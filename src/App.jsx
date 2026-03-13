@@ -5,6 +5,8 @@ import StudentDetails from "./components/Students/StudentDetails";
 import StaffDetails from "./components/Staff/StaffDetails";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import StudentAdd from "./components/Form/StudentAdd";
+import FacultyAdd from "./components/Form/FacultyAdd";
 import "./App.css";
 
 function App() {
@@ -17,9 +19,10 @@ function App() {
             <Link to="/" className="nav-item">Dashboard</Link>
             <Link to="/students" className="nav-item">Student Records</Link>
             <Link to="/staff" className="nav-item">Staff Directory</Link>
-            <div className="nav-divider"></div>
             <Link to="/about" className="nav-item secondary">About HK</Link>
             <Link to="/contact" className="nav-item secondary">Contact Support</Link>
+            <Link to="/studentadd" className="nav-item secondary">Add Students</Link>
+            <Link to="/facultyadd" className="nav-item secondary">Add Staff</Link>
           </nav>
         </aside>
 
@@ -44,6 +47,9 @@ function App() {
                 <Route path="/staff" element={<StaffDetails />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/studentadd" element={<StudentAdd />} />
+                <Route path="/facultyadd" element={<FacultyAdd />} />
+                
               </Routes>
             </div>
           </main>

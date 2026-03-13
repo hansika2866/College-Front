@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import StudentTable from "./StudentTable";
 import "./StudentDetails.css";
+import { useNavigate } from "react-router-dom"; // 1. Already imported
 
 const StudentDetails = () => {
   const [students, setStudents] = useState([]);
   const [isTableView, setIsTableView] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const navigate = useNavigate(); // 2. ADD THIS LINE HERE
 
   useEffect(() => {
     fetch("http://localhost:8080/api/student")
@@ -36,9 +39,15 @@ const StudentDetails = () => {
           />
         </div>
 
-        <button className="toggle-btn" onClick={() => setIsTableView(!isTableView)}>
-            {isTableView ? "Show Cards" : "Show Table"}
-        </button>
+        {/* 3. Wrap buttons in a div to keep them aligned in your Netflix theme */}
+        <div className="header-buttons">
+            <button className="toggle-btn" onClick={() => setIsTableView(!isTableView)}>
+                {isTableView ? "Show Cards" : "Show Table"}
+            </button>
+            <button className="add-btn" onClick={() => navigate("/studentadd")}>
+                Add Student
+            </button>
+</div>
       </div>
 
       {isTableView ? (

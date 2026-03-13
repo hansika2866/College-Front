@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import StaffTable from "./StaffTable";
 import "./StaffDetails.css";
+import { useNavigate } from "react-router-dom"; // 1. Import useNavigate
 
 const StaffDetails = () => {
   const [staff, setStaff] = useState([]);
   const [isTableView, setIsTableView] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  
+  const navigate = useNavigate(); // 2. Initialize navigate
 
   useEffect(() => {
     fetch("http://localhost:8080/api/staff")
@@ -26,7 +29,7 @@ const StaffDetails = () => {
         <h1 className="title">Staff Directory</h1>
         
         <div className="search-container">
-          <span className="search-icon">🔍  </span>
+          <span className="search-icon">🔍</span>
           <input
             type="text"
             placeholder="Search name, ID or department..."
@@ -36,9 +39,16 @@ const StaffDetails = () => {
           />
         </div>
 
-        <button className="toggle-btn" onClick={() => setIsTableView(!isTableView)}>
-          {isTableView ? "Show Cards" : "Show Table"}
-        </button>
+        {/* 3. Wrapped buttons in a div for spacing */}
+        <div className="header-buttons">
+          <button className="toggle-btn" onClick={() => setIsTableView(!isTableView)}>
+            {isTableView ? "Show Cards" : "Show Table"}
+          </button>
+          
+          <button className="add-btn" onClick={() => navigate("/staffadd")}>
+            Add Staff
+          </button>
+        </div>
       </div>
 
       {isTableView ? (
